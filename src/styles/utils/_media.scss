@@ -1,0 +1,130 @@
+/*
+ *
+ * Extra small
+ * 575px and wider
+ *
+ */
+@mixin xs {
+  @media only screen and (max-width: 35.9375em) {
+    @content;
+  }
+}
+
+/*
+   *
+   * Small down
+   * 767px and narrower
+   *
+   */
+@mixin smd {
+  @media only screen and (max-width: 47.9375em) {
+    @content;
+  }
+}
+
+/*
+   *
+   * Small
+   * 576px and wider
+   *
+   */
+@mixin sm {
+  @media only screen and (min-width: 36em) {
+    @content;
+  }
+}
+/*
+   *
+   * Medium
+   * 768px and wider
+   *
+   */
+@mixin md {
+  @media only screen and (min-width: 48em) {
+    @content;
+  }
+}
+
+/*
+   *
+   * Large
+   * 992px and wider
+   *
+   */
+@mixin lg {
+  @media only screen and (min-width: 62em) {
+    @content;
+  }
+}
+
+/*
+   *
+   * Extra large
+   * 1200px and wider
+   *
+   */
+@mixin xlg {
+  @media only screen and (min-width: 75em) {
+    @content;
+  }
+}
+
+/*
+   *
+   * Extra Extra large
+   * 1600px and wider
+   *
+   */
+@mixin xxlg {
+  @media only screen and (min-width: 100em) {
+    @content;
+  }
+}
+
+/*
+   *
+   * Slider Container Medium
+   * 600px and wider
+   *
+   */
+@mixin scmd {
+  @media only screen and (min-width: 55.8125em) {
+    @content;
+  }
+}
+
+/*
+   *
+   * Slider Container Large
+   * 1117px and wider
+   *
+   */
+@mixin sclg {
+  @media only screen and (min-width: 69.8125em) {
+    @content;
+  }
+}
+
+/*
+   *
+   * Slider Container Extra large
+   * 1325px and wider
+   *
+   */
+@mixin scxlg {
+  @media only screen and (min-width: 82.8125em) {
+    @content;
+  }
+}
+
+/*
+   *
+   * Slider Container Extra Extra large
+   * 1585px and wider
+   *
+   */
+@mixin scxxlg {
+  @media only screen and (min-width: 99.0625em) {
+    @content;
+  }
+}
