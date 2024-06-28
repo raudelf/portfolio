@@ -19,9 +19,9 @@
   &:hover,
   &:active,
   &:focus-visible {
-    color: $white;
-    background-color: $black;
-    border-color: $black;
+    color: $secondary;
+    background-color: $white;
+    border-color: $secondary;
     text-decoration: none;
   }
 

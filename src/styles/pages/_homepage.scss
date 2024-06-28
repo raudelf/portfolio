@@ -1,0 +1,36 @@
+.homepage {
+  margin-top: 20px;
+
+  @include md {
+    height: 75dvh;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.homepage__content {
+  @include md {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.homepage__image-container {
+  border: 1rem solid $white;
+  border-bottom-width: 4rem;
+  @include md {
+    flex: 1 auto;
+  }
+}
+
+.homepage__text-container {
+  margin-top: 1rem;
+
+  @include md {
+    margin-top: 0;
+    flex: 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

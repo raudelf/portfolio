@@ -21,13 +21,14 @@
  *
  */
 @import "base/reset";
-@import "components/btn";
 @import "base/container";
+@import "base/btn";
 @import "base/layout";
 
 /*
  *
- * Components
+ * Pages
  *
  */
-@import "components/errorPage";
+@import "pages/homepage";
+@import "pages/errorPage";
