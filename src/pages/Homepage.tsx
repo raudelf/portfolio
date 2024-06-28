@@ -14,8 +14,13 @@ function Homepage() {
             />
           </div>
           <div className="homepage__text-container">
-            <h1 className="homepage__title"></h1>
-            <p className="homepage__text"></p>
+            <h1 className="homepage__title">Raudel Flores</h1>
+            <p className="homepage__text">
+              A front-end engineer located in the Chicagoland area, experienced
+              in web development with React, Typescript, GraphQL, and Big
+              Commerce. Determined to craft exceptional user experiences with a
+              deep understanding of accessibility guidelines (WCAG).
+            </p>
           </div>
         </div>
       </div>
