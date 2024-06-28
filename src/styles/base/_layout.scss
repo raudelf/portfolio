@@ -1,0 +1,98 @@
+/*
+ *
+ * Header
+ *
+ */
+.header {
+  padding: 1rem 0;
+  background-color: $primary;
+}
+
+.header__link-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__link-list {
+  @include resetList();
+
+  display: flex;
+  gap: 1rem;
+}
+
+.header__link {
+  &--main {
+    color: $secondary;
+    font-family: "LatoBold";
+    font-size: 1.5rem;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+
+  &--active {
+    color: $white;
+    background-color: $secondary;
+  }
+}
+
+/*
+ *
+ * Body
+ *
+ */
+
+.body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: $secondary;
+  color: $white;
+}
+
+/*
+ *
+ * Main
+ *
+ */
+
+.main {
+  display: block;
+  flex: 1;
+  margin: 0;
+  position: relative;
+}
+
+/*
+ *
+ * Footer
+ *
+ */
+
+.footer {
+  padding: 2rem 0;
+}
+
+.footer__list {
+  @include resetList();
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer__link {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}

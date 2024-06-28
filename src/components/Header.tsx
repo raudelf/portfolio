@@ -1,3 +1,5 @@
+import { Link, NavLink } from "react-router-dom";
+
 const Header = () => {
   return (
     <header className="header">
@@ -8,22 +10,40 @@ const Header = () => {
         <div className="container">
           <div className="header__link-container">
             <div className="header__main-link">
-              <a className="header__link header__link--main" href="/">
+              <Link className="header__link header__link--main" to="/">
                 Raudel Flores
-              </a>
+              </Link>
             </div>
 
             <div className="header__links">
               <ul className="header__link-list">
                 <li>
-                  <a className="header__link" href="/contact">
+                  <NavLink
+                    className={({ isActive }) =>
+                      [
+                        "btn-secondary",
+                        "header__link",
+                        isActive ? "header__link--active" : "",
+                      ].join(" ")
+                    }
+                    to="/contact"
+                  >
                     Contact
-                  </a>
+                  </NavLink>
                 </li>
                 <li>
-                  <a className="header__link" href="/projects">
+                  <NavLink
+                    className={({ isActive }) =>
+                      [
+                        "btn-secondary",
+                        "header__link",
+                        isActive ? "header__link--active" : "",
+                      ].join(" ")
+                    }
+                    to="/projects"
+                  >
                     Projects
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </div>
