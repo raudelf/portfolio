@@ -35,26 +35,31 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: $primary;
+  color: $secondary;
   border: 1px solid $primary;
   padding: 9px 2rem 7px;
   font-size: 0.875rem;
   border-radius: 0;
-  background-color: transparent;
+  background-color: $white;
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
 
   &:hover,
   &:active,
   &:focus-visible {
-    background-color: $primary;
+    background-color: $secondary;
     color: $white;
 
     svg {
       color: $white;
       fill: currentColor;
     }
+  }
+
+  .header__link-list & {
+    margin-bottom: 0;
+    text-decoration: none;
   }
 }
 
@@ -110,20 +115,10 @@
     font-weight: 400;
     border-radius: 0;
     border: none;
-    color: $primary;
+    color: $white;
     padding: 0;
     vertical-align: inherit;
     margin-bottom: 5px;
-
-    &--logout {
-      color: $white;
-
-      &:hover,
-      &:active,
-      &:focus-visible {
-        color: $white;
-      }
-    }
 
     &--underline {
       text-decoration: underline;
@@ -137,26 +132,8 @@
   }
 }
 
-.btn-link,
-.btn-link.active,
-.btn-link:active,
-.btn-link[disabled],
-fieldset[disabled] .btn-link {
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.btn-link,
-.btn-link:active,
 .btn-link:focus-visible,
 .btn-link:hover {
-  border-color: transparent;
-}
-
-.btn-link:focus-visible,
-.btn-link:hover {
-  color: $primary;
   text-decoration: underline;
   background-color: transparent;
 }
