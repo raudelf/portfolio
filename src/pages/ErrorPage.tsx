@@ -8,7 +8,7 @@ const ErrorPage = () => {
     <div className="error-page">
       <h1>Caught in 4K</h1>
       <p>Looks like you broke something...</p>
-      <Link to="/" className="btn">
+      <Link to="/" className="btn error-page__btn">
         Escape
       </Link>
     </div>

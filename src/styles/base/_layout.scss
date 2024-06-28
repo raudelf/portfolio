@@ -9,16 +9,24 @@
 }
 
 .header__link-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include md {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .header__link-list {
   @include resetList();
 
+  margin-top: 1rem;
   display: flex;
+  justify-content: center;
   gap: 1rem;
+
+  @include md {
+    margin-top: 0;
+  }
 }
 
 .header__link {
