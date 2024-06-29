@@ -17,10 +17,11 @@ function Homepage() {
             <h1 className="homepage__title">Raudel Flores</h1>
             <p className="homepage__text">
               A front-end engineer located in the Chicagoland area, experienced
-              in web development with React, Typescript, GraphQL, and Big
-              Commerce. Determined to craft exceptional user experiences with a
-              deep understanding of accessibility guidelines (WCAG).
+              in React, Typescript, GraphQL, and BigCommerce web development.
+              Determined to craft exceptional user experiences with a deep
+              understanding of accessibility guidelines (WCAG).
             </p>
+            <p>Oh yeah, and I like to hike!</p>
           </div>
         </div>
       </div>
