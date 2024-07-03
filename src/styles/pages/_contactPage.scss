@@ -28,6 +28,8 @@
 .contact-page__input-wrapper,
 .contact-page__text-area-wrapper {
   margin-bottom: 1rem;
+  position: relative;
+
   @include md {
     margin-bottom: 0;
     display: flex;
@@ -38,6 +40,19 @@
 .contact-page__text-area-wrapper {
   grid-column-start: 1;
   grid-column-end: 3;
+}
+
+.contact-page__input-label {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  color: #595959;
+  transition: 0.1s ease-in;
+
+  &--filled {
+    top: 2px;
+    font-size: 0.75rem;
+  }
 }
 
 .contact-page__input,
@@ -53,4 +68,8 @@
 
 .contact-page__btn {
   width: 100%;
+}
+
+.contact-page__success-container {
+  text-align: center;
 }
