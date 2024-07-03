@@ -7,6 +7,7 @@
 @import "utils/mixins";
 @import "utils/accessibility";
 @import "utils/variables";
+@import "utils/loadingDots";
 
 /*
   *
@@ -32,3 +33,4 @@
  */
 @import "pages/homepage";
 @import "pages/errorPage";
+@import "pages/contactPage";
