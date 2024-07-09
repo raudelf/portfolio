@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import HamburgerMenu from "./HamburgerMenu";
 
 const Header = () => {
   return (
@@ -47,6 +48,8 @@ const Header = () => {
                 </li>
               </ul>
             </div>
+
+            <HamburgerMenu />
           </div>
         </div>
       </nav>
