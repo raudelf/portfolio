@@ -9,11 +9,9 @@
 }
 
 .header__link-container {
-  @include md {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header__link-list {
@@ -46,6 +44,43 @@
     color: $white;
     background-color: $secondary;
   }
+}
+
+.header__links {
+  display: none;
+
+  @include md {
+    display: block;
+  }
+}
+
+.header__hamburger-menu-btn {
+  @include cleanBtn;
+
+  &:focus-visible {
+    outline: 1px solid #e59700;
+    border: 1px solid $white;
+  }
+
+  @include md {
+    display: none;
+  }
+}
+
+.header__hamburger-menu {
+  background-color: $white;
+  color: $black;
+
+  &[data-trigger="MenuTrigger"] {
+    width: 100%;
+    transform: translate(-12px, 10px);
+  }
+}
+
+.header__hamburger-link {
+  font-weight: bold;
+  padding: 20px;
+  font-size: 20px;
 }
 
 /*
