@@ -12,7 +12,7 @@ const Header = () => {
           <div className="header__link-container">
             <div className="header__main-link">
               <Link className="header__link header__link--main" to="/">
-                Raudel Flores
+                RAUDEL FLORES
               </Link>
             </div>
 
@@ -22,21 +22,6 @@ const Header = () => {
                   <NavLink
                     className={({ isActive }) =>
                       [
-                        "btn-secondary",
-                        "header__link",
-                        isActive ? "header__link--active" : "",
-                      ].join(" ")
-                    }
-                    to="/contact"
-                  >
-                    Contact
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    className={({ isActive }) =>
-                      [
-                        "btn-secondary",
                         "header__link",
                         isActive ? "header__link--active" : "",
                       ].join(" ")
@@ -44,6 +29,19 @@ const Header = () => {
                     to="/projects"
                   >
                     Projects
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    className={({ isActive }) =>
+                      [
+                        "header__link",
+                        isActive ? "header__link--active" : "",
+                      ].join(" ")
+                    }
+                    to="/contact"
+                  >
+                    Contact
                   </NavLink>
                 </li>
               </ul>
