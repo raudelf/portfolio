@@ -16,11 +16,31 @@
 }
 
 .homepage__image-container {
-  border: 1rem solid $white;
-  border-bottom-width: 4rem;
+  border: 1px solid $primary;
   @include md {
     flex: 1 auto;
   }
+}
+
+.homepage__title {
+  position: relative;
+  color: $primary;
+
+  @include md {
+    &::before {
+      content: "";
+      position: absolute;
+      left: -2rem;
+      top: 50%;
+      height: 1px;
+      width: 1.5rem;
+      background-color: $primary;
+    }
+  }
+}
+
+.homepage__image {
+  padding: 1rem;
 }
 
 .homepage__text-container {
