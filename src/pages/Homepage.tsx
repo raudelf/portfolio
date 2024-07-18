@@ -1,5 +1,6 @@
+import ToolIcon from "../components/ToolIcon";
 import BaseLayout from "../shared/BaseLayout";
-import { imageAltText } from "../shared/utils";
+import { imageAltText, techStack } from "../shared/utils";
 
 function Homepage() {
   return (
@@ -13,6 +14,7 @@ function Homepage() {
               alt={imageAltText}
             />
           </div>
+
           <div className="homepage__text-container">
             <h1 className="homepage__title">Raudel Flores</h1>
             <p className="homepage__text">
@@ -23,6 +25,19 @@ function Homepage() {
             </p>
             <p>Oh yeah, and I like to hike!</p>
           </div>
+        </div>
+        <div className="homepage__tools-container">
+          <h2 className="homepage__subtitle">Tools</h2>
+          <ul className="homepage__tools-list">
+            {techStack.map((tool, index) => {
+              return (
+                <li key={index} className="homepage__tool-item">
+                  <ToolIcon tool={tool} />
+                  {tool}
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </BaseLayout>

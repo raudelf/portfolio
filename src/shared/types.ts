@@ -8,3 +8,7 @@ export interface TextboxInputProps extends TextFieldProps {
   placeHolder?: string;
   isRequired?: boolean;
 }
+
+export interface ToolTypes {
+  tool: string;
+}
