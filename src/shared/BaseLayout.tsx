@@ -1,9 +1,6 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-
-interface BaseLayoutProps {
-  children: React.ReactNode;
-}
+import { BaseLayoutProps } from "./types";
 
 const BaseLayout = (props: BaseLayoutProps) => {
   const { children } = props;

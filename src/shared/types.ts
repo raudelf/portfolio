@@ -12,3 +12,7 @@ export interface TextboxInputProps extends TextFieldProps {
 export interface ToolTypes {
   tool: string;
 }
+
+export interface BaseLayoutProps {
+  children: React.ReactNode;
+}
