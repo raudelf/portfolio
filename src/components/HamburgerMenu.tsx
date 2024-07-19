@@ -27,15 +27,15 @@ const HamburgerMenu = () => {
         <Menu>
           <MenuItem
             className="header__hamburger-link"
-            onAction={() => navigate("/contact")}
-          >
-            Contact
-          </MenuItem>
-          <MenuItem
-            className="header__hamburger-link"
             onAction={() => navigate("/projects")}
           >
             Projects
+          </MenuItem>
+          <MenuItem
+            className="header__hamburger-link"
+            onAction={() => navigate("/contact")}
+          >
+            Contact
           </MenuItem>
         </Menu>
       </Popover>

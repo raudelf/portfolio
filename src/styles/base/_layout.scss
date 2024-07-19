@@ -5,13 +5,20 @@
  */
 .header {
   padding: 1rem 0;
-  background-color: $primary;
 }
 
 .header__link-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include md {
+    align-items: last baseline;
+  }
+}
+
+.header__main-link {
+  max-width: 170px;
 }
 
 .header__link-list {
@@ -28,21 +35,58 @@
 }
 
 .header__link {
+  position: relative;
+  color: $white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s linear;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 4px;
+    width: 0%;
+    background-color: transparent;
+    transition: width 0.1s ease-in;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $primary;
+
+    &::after {
+      background-color: $primary;
+      width: 100%;
+    }
+  }
+
   &--main {
-    color: $secondary;
-    font-family: "LatoBold";
-    font-size: 1.5rem;
+    color: $primary;
+    font-family: "LatoBlack";
+    font-size: 2rem;
     text-decoration: none;
+    line-height: 1;
 
     &:hover,
     &:focus-visible {
-      text-decoration: underline;
+      color: $white;
     }
   }
 
   &--active {
-    color: $white;
-    background-color: $secondary;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      height: 4px;
+      width: 100%;
+      background-color: $primary;
+    }
   }
 }
 
@@ -57,6 +101,10 @@
 .header__hamburger-menu-btn {
   @include cleanBtn;
 
+  svg {
+    fill: $primary;
+  }
+
   &:focus-visible {
     outline: 1px solid #e59700;
     border: 1px solid $white;
@@ -68,12 +116,13 @@
 }
 
 .header__hamburger-menu {
-  background-color: $white;
-  color: $black;
+  width: 100%;
+  transform: translate(-12px, 30px);
+  background-color: $hamburger-menu-bg;
+  color: $white;
 
-  &[data-trigger="MenuTrigger"] {
-    width: 100%;
-    transform: translate(-12px, 10px);
+  @include md {
+    display: none;
   }
 }
 
@@ -81,6 +130,12 @@
   font-weight: bold;
   padding: 20px;
   font-size: 20px;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $primary;
+    color: $secondary;
+  }
 }
 
 /*
@@ -120,7 +175,7 @@
  */
 
 .footer {
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .footer__list {
