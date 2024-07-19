@@ -20,7 +20,7 @@
 }
 
 .homepage__image-container {
-  border: 1px solid $primary;
+  border: 2px solid $primary;
   @include md {
     flex: 1 auto;
   }
@@ -36,7 +36,7 @@
       position: absolute;
       left: -2rem;
       top: 50%;
-      height: 1px;
+      height: 2px;
       width: 1.5rem;
       background-color: $primary;
     }
@@ -78,7 +78,7 @@
   width: 100%;
   margin-top: 2rem;
   padding: 1.5rem;
-  border-top: 1px solid $primary;
+  border-top: 2px solid $primary;
 }
 
 .homepage__tools-list {
