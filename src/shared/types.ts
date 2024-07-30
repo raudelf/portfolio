@@ -16,3 +16,15 @@ export interface ToolTypes {
 export interface BaseLayoutProps {
   children: React.ReactNode;
 }
+
+export interface ProjectCardProps {
+  clientLogo: string;
+  clientName: string;
+  clientSiteUrl: string;
+  clientSummary: string;
+  descriptionText: string;
+}
+
+export interface ProjectCardListProps {
+  projects: ProjectCardProps[];
+}
