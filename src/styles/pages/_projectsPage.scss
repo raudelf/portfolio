@@ -18,7 +18,8 @@
   @include md {
     display: flex;
     flex-flow: row wrap;
-    gap: 1rem;
+    justify-content: space-between;
+    gap: 2rem;
   }
 }
 
@@ -41,16 +42,39 @@
   background-color: #313d4e;
   border-radius: 2px;
   transition: transform 0.1s linear;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 
   @include sm {
     display: flex;
     gap: 1rem;
   }
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    border-radius: 2px;
+    z-index: -1;
+  }
+
+  &:hover,
   &:focus-visible {
-    outline: 1px solid #e59900;
-    border: 1px solid $white;
-    outline-offset: 4px;
+    &::before {
+      background: linear-gradient(
+        45deg,
+        $primary,
+        $white,
+        $secondary,
+        $white,
+        $primary
+      );
+      background-size: 400%;
+      animation: steam 20s linear infinite;
+    }
   }
 }
 
