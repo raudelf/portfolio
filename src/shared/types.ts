@@ -9,10 +9,6 @@ export interface TextboxInputProps extends TextFieldProps {
   isRequired?: boolean;
 }
 
-export interface ToolTypes {
-  tool: string;
-}
-
 export interface BaseLayoutProps {
   children: React.ReactNode;
 }

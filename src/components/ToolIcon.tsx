@@ -5,7 +5,10 @@ import JavascriptSVG from "../shared/svg/JavascriptSVG";
 import NodeSVG from "../shared/svg/NodeJSSVG";
 import ReactSVG from "../shared/svg/ReactSVG";
 import TypeScriptSVG from "../shared/svg/TypeScriptSVG";
-import { ToolTypes } from "../shared/types";
+
+interface ToolTypes {
+  tool: string;
+}
 
 const ToolIcon = (prop: ToolTypes) => {
   const { tool } = prop;
