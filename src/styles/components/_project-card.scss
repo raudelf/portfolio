@@ -1,0 +1,106 @@
+.project-card__container {
+  @include cleanBtn;
+
+  position: relative;
+  min-height: 200px;
+  padding: 10px;
+  border: 1px solid transparent;
+  background-color: #313d4e;
+  border-radius: 2px;
+  transition: transform 0.1s linear;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  cursor: auto;
+
+  @include sm {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    border-radius: 2px;
+    z-index: -1;
+  }
+
+  &:hover,
+  &:focus-visible {
+    &::before {
+      background: linear-gradient(
+        45deg,
+        $primary,
+        $white,
+        $secondary,
+        $white,
+        $primary
+      );
+      background-size: 400%;
+      animation: steam 20s linear infinite;
+    }
+  }
+
+  .projects-page__list-item:nth-child(odd) & {
+    flex-direction: row-reverse;
+  }
+}
+
+.project-card__img-container {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  background-color: $white;
+  outline-offset: 2px;
+  border-radius: 2px;
+
+  @include sm {
+    width: 40%;
+  }
+}
+
+.project-card__img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.project-card__content {
+  max-width: 50%;
+  text-align: left;
+  color: $white;
+}
+
+.project-card__client {
+  position: relative;
+}
+
+.project-card__link {
+  position: relative;
+  display: block;
+  width: max-content;
+  color: $white;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 4px;
+    background-color: transparent;
+    transition: width 0.1s ease-in;
+  }
+  &:hover {
+    &::after {
+      background-color: $primary;
+      width: 100%;
+    }
+  }
+}
+
+.project-card__text {
+  text-align: left;
+}
